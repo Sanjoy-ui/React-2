@@ -1,6 +1,7 @@
 # React Routers Project
 
 ## 📸 Screenshots
+![ss1](public/ss1.png)
 
 
 This project demonstrates how to use **React Router** for building a simple, responsive, multi-page application using React. It includes navigation using `react-router-dom` and styling with **Tailwind CSS**.
