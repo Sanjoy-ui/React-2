@@ -1,12 +1,59 @@
-# React + Vite
+# React Routers Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📸 Screenshots
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates how to use **React Router** for building a simple, responsive, multi-page application using React. It includes navigation using `react-router-dom` and styling with **Tailwind CSS**.
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React Router v6+ for navigation
+- Responsive layout
+- Navigation bar using `NavLink`
+- Tailwind CSS for styling
+- Sticky header
+- Basic routing setup with pages like Home, About, and Contact
+
+## 🛠️ Technologies Used
+
+- React
+- React Router DOM
+- Tailwind CSS
+- Vite (assumed as bundler – confirm if different)
+
+## 📂 Project Structure
+
+```
+React_routers/
+├── components/
+│ └── Header.jsx # Navbar with routing links
+├── pages/
+│ ├── Home.jsx # Home page
+│ ├── About.jsx # About page
+│ └── Contact.jsx # Contact page
+├── App.jsx # Main app with routes
+└── main.jsx # Entry point for React
+```
+
+
+## 🧪 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Sanjoy-ui/React-2.git
+cd React_2/React_routers
+```
+## 2. Install dependencies
+```
+npm install
+npm run dev
+
+```
+## 🔗 Example Routes
+- / → Home Page
+
+- /about → About Page
+
+- /contact → Contact Page
+  
