@@ -7,27 +7,27 @@ export default function Footer() {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <Link to="/" className="flex items-center">
+                        <NavLink to="/" className="flex items-center">
                             <img
                                 src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
                                 className="mr-3 h-16"
                                 alt="Logo"
                             />
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <NavLink to="/" className={({isActive})=> `hover:text-orange-700 hover:underline ${isActive ? "text-orange-700" : "text-gray-500"} `}>
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:underline">
+                     <NavLink to="/about" className={({isActive})=>`hover:underline hover:text-orange-700 ${isActive ? "text-orange-700" : "text-gray-500"}`} >
                                         About
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/sanjoy-ui"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
@@ -71,9 +71,9 @@ export default function Footer() {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
-                        © 2023
+                        © 2025
                         <a href="https://hiteshchoudhary.com/" className="hover:underline">
-                            hiteshchoudhary
+                           Sanjoy Deb
                         </a>
                         . All Rights Reserved.
                     </span>
