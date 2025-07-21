@@ -63,3 +63,11 @@ let gg = 6
 if (testArray.includes(gg)) {
     console.log('exists');
 }
+
+try {
+    const response = fetch('');
+    response.json()
+    
+} catch (error) {
+    console.log(error)
+}
