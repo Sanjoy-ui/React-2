@@ -4,6 +4,7 @@ import SearchInput from './components/SearchInput'
 
 import Nav from './components/Nav'
 import Cards from './components/Cards'
+import Hero from './components/Hero'
 
 function App() {
  
@@ -12,7 +13,8 @@ function App() {
     <>
      <SearchInput />
     <Nav />
-    <Cards />
+    
+    <Hero />
     </>
   )
 }

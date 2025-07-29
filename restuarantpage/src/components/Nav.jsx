@@ -3,7 +3,7 @@ import SvgCards from './SvgCards'
 
 function Nav() {
   return (
-    <div className='flex flex-wrap gap-6 mx-10 mt-20 px-20'>
+    <div className='flex flex-wrap gap-6 justify-center mx-10 mt-20 px-20'>
          <SvgCards title={'All'}/>
      <SvgCards title={'Breakfast'}/>
      <SvgCards title={'Soup'}/>
