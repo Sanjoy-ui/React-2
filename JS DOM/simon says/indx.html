@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: aliceblue;
+            background: #212121;
+        }
+        .container{
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .red{
+            background: rgb(234, 133, 133);
+        }
+        .green{
+            background: rgb(144, 239, 144);
+        }
+        .blue{
+            background: rgb(132, 132, 249);
+        }
+        .yellow{
+            background-color: rgb(240, 240, 138);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="">Simon Says</h1>
+    <div class=" container">
+    <div class="item red">Red</div>
+    <div class="item green">Green</div>
+    <div class="item blue">Blue</div>
+    <div class="item yellow">Yellow</div>
+    </div>
+    
+</body>
+<script src="./index.js"></script>
+</html>
