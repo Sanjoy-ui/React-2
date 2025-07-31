@@ -18,9 +18,7 @@ let interval = ()=>{
 
   if (randomHighlight === 1) {
     redBtn.style.backgroundColor = '#ff4444'
-    redBtn.addEventListener('click' ,(e)=>{
-    alert('click')
-  })
+    
   } else if (randomHighlight === 2) {
         greenBtn.style.backgroundColor = '#44ff44'
 
