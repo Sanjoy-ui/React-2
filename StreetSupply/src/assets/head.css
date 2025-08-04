@@ -1,0 +1,10 @@
+@media (max-width : 465px){
+    .ul{
+        display: none;
+    
+} 
+    .logo{
+        padding-right: 4rem;
+    }
+    
+}
