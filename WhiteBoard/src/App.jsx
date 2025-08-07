@@ -6,12 +6,7 @@ import { useEffect } from 'react';
 function App() {
   
 
-  const appID =576874493;
-  const userID = 'sanjoydb';
-  const roomID = '5690';
-  const userName = 'Sanjoy ui'
-  const token = '04AAAAAGiUvscADFgUkH7LIibtDSSzZwCxABXVcXGHMZx933bDBxg5Eb6Py//HNNBVNjRHkz2QgSAaQzQJgXCGiHSfJ264K63Y7QjcD2aCKFOvgGKew2xI++Zs36SN2ZjYrTvScgGk689W66OV1v2spv0ahLo3N+n8dJQu8yKVgp/oMElhmqTGVaVBZOm0zH8VeHZNQMpdiHAsApFOdEjPrl9wkM72Y8az9YhY0dbJJFVMkSSco3EMntxhGtJQcxhPdqB/PcsgNy/wAQ=='
-  const server = 'wss://webliveroom576874493-api.coolzcloud.com/ws';
+ 
   const zg = new ZegoExpressEngine(appID, server);
   const zegoSuperBoard = ZegoSuperBoardManager.getInstance();
   const result = async ()=>{
@@ -39,7 +34,8 @@ function App() {
   },[zegoSuperBoard])
   return (
    <div className='h-[100vh] w-full bg-black '>
-     <div className='w-full h-full' id="parentDomID">
+      <h1 className='text-white text-center text-4xl py-6 font-bold'>Virtual White Board</h1>
+     <div className='w-full h-3/4' id="parentDomID">
       
     </div>
    </div>
