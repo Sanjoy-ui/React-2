@@ -88,13 +88,13 @@ app.get("/bearerToken", async (req, res) => {
  try {
   const response = await axios.get("https://secrets-api.appbrewery.com/secrets/42" ,{
     headers : {
-      Authorization : yourBearerToken,
+      Authorization : `Bearer ${yourBearerToken}`,
     }
   })
   const result = JSON.stringify(response.data);
-  res.render("index.ejs " , {content : result})
+  res.render("index.ejs" , {content : result})
  } catch (error) {
-  res.render("index.ejs " , {content : error })
+  res.render("index.ejs" , {content : error })
  }
 });
 
