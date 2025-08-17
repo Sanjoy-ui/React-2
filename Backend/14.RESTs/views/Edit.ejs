@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="post">
+           <% if(locals.data){%>
+            <h3>@<%=data.username %></h3>
+            <h4><%= data.content%></h4>
+            <button class="btn">Delete</button>
+            <%} %>
+    </div>
+    <h2>Edit your Content</h2>
+    <form action="/posts/<%= data.id%>?_method=PATCH" method="post">
+        <textarea name="content" placeholder="Customize your Quote" id=""></textarea>
+        <button >Submit</button>
+    </form>
+</body>
+</html>

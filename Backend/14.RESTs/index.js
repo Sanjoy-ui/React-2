@@ -3,6 +3,7 @@ import express from "express";
 import {dirname} from "path"
 import {fileURLToPath} from "url"
 const __dirname = dirname(fileURLToPath(import.meta.url))
+import methodOverride from "method-override"
 
 const app = express()
 const port= 8080
@@ -42,6 +43,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(methodOverride("_method"))
 
 app.get("/" , (req , res )=>{
     res.render("index.ejs")
@@ -61,12 +63,34 @@ app.post("/posts" , (req , res)=>{
     res.redirect("/posts")
 })
 
-app.get("/posts/:id" , (req,res)=>{
+app.get("/posts/:id", (req,res)=>{
+    const { id }=req.params 
+    const post = posts.find((post)=> id===post.id)
+    res.render("post.ejs" , {data : post})
+})
+
+app.get("/posts/:id/edit" , (req,res)=>{
     const {id } = req.params
-    const indePost = posts.find( (post) => id=== post.id )
-    console.log(indePost)
-    res.render("post.ejs" , {data : indePost})
+    const userPost = posts.find((post)=> id=== post.id);
+    res.render("Edit.ejs" , {data : userPost})
     
+    
+})
+app.patch("/posts/:id" , (req,res)=>{
+    const {id}= req.params;
+    let upContent = req.body.content
+    const post = posts.find((post)=> id===post.id)
+    post.content = upContent;
+    res.redirect("/posts")
+    console.log(post.content)
+
+
+})
+
+app.delete("/posts/:id" , (req,res)=>{
+    const {id}= req.params;
+    posts = posts.filter((post)=> post.id !== id)
+    res.redirect("/posts")
     
 })
 
